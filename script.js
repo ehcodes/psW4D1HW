@@ -124,3 +124,31 @@ for(let i=0;i<2;i++){
     timmy.exercise();
 }
 console.log(timmy);
+
+// Chef Make Dinners
+// Add a constructor to dinner that sets the string properties, appetizer, entree and dessert.
+class Dinner {
+    constructor(appetizer, entree, dessert){
+        this.appetizer = appetizer;
+        this.entree = entree;
+        this.dessert = dessert;
+    }
+}
+// Chef should be a factory of Dinner
+class Chef {
+    constructor(name){
+        this.name = name;
+    }
+// Add a method on chef that takes three arguments
+// and returns a new Dinner based on those arguments.
+    makeDinner(appetizer, entree, dessert){
+        const dinDin = new Dinner(appetizer, entree, dessert);
+        return `For dinner we have ${appetizer} as the appetizer, ${entree} as the entree, and ${dessert} for dessert.`
+    }
+
+}
+const tanya = new Chef('Tanya')
+// Have the Chef create 3 dinners, log the dinners
+console.log(tanya.makeDinner('pasteles','arroz con gandules','tembleque'));
+console.log(tanya.makeDinner('tuna tartare','twice baked potatoes','pecan brownies'));
+console.log(tanya.makeDinner('nachos fries','cheesburgers','strawberry cheesecake'));
